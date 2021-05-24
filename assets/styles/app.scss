@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+$primary: #BDBAC2;
+$secondary: #231A34;
+$text-primary: #F8F8F8;
+
+body {
+    background-color: $primary;
+}
+
+nav {
+    background-color: $secondary;
+}
+
+.amenu, .amenu:hover {
+    color: $text-primary;
+}
