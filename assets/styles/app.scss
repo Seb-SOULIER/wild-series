@@ -15,3 +15,25 @@ nav {
 .amenu, .amenu:hover {
     color: $text-primary;
 }
+
+.body-show {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 400px;
+    grid-gap: 10px;
+  }
+  
+  .container-show, .buton-show {
+      padding: 10px;
+      border: 2px solid black;
+      border-radius: 4px;
+  }
+  
+  .buton-show {
+    background-color: rgba(0, 0, 0, .3);
+    text-decoration: none;
+    color: black;
+  }
