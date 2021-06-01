@@ -3,17 +3,30 @@
 
 {% block body %}
 
-<div class="media">
-  <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
-  <div class="media-body">
+<div class="media bodyprogram1">
+  <img class="align-self-start mr-3 bodyimg1" src="{{program.poster}}" alt="{{ program.title }} poster">
+  <div class="media-body bodyprogram2">
     <h1 class="mt-0">{{ program.title }}</h1>
     <p>{{ program.summary }}</p>
     <p>Catégorie : {{ program.category.name }}</p>
+    <a href="{{ path('program_index') }}" class="buton-show buton-show2">Retour à la liste des programmes</a>
   </div>
 </div>
+<div class="media">
+        <div class="media-body bodyshow body-show3">
+        {% if seasons %}
+            {% for season in seasons %}
+                <div class="container-show">
+                    <h2>Season #{{ season.number}}</h2>
+                    <a href="{{ path("program_season_show", {seasonId: season.id, programId: program.id}) }}" class="buton-show">Visualiser</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Aucune saison trouvée</p>
+        {% endif %}
+        </div>
+    </div>
 
-<a href="{{ path('program_index') }}">
-    Retour à la liste des programmes
-</a>
+
 
 {% endblock %}

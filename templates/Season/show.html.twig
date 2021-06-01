@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div class="media">
+    <div class="media-body bodyshow body-show2 seasonshow">
+        <div class="container-show containerseason">
+            <h2>Season #{{ season.number}}</h2>
+            <h3>{{ season.year}}</h3>
+            <p>{{ season.description}}</p>
+        </div>
+    </div>
+    <div class="media-body bodyshow body-show2 seasonshow">
+        {% for episode in episodes %}
+            <div class="container-show">
+                <h2>Episode #{{ episode.number}}</h2>
+                <h3>{{ episode.title}}</h3>
+                <p>{{ episode.synopsis}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
